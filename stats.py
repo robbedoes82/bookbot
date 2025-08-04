@@ -12,5 +12,14 @@ def character_count(string):
             character_count[letter] += 1
     return character_count    
 
-# test
-# print(character_count("Hallo ik ben Robin, ik ben 42 jaar oud."))
+# sort function to sort on value from dic
+def sort_on(items):
+    return items["num"]
+
+def sort_character_list(character_dic):
+    dic_list = []
+    for key, value in character_dic.items():
+        dic_list.append({"char": key, "num": value})
+        dic_list.sort(reverse=True, key=sort_on)
+    return dic_list
+
